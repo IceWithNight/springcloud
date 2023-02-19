@@ -1,5 +1,5 @@
-# ice
-private
+# springcloud
+public
 SpringCloud 项目练习
 # 1 cloud-api-commons
 项目实体类及接口
