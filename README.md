@@ -1,7 +1,7 @@
 # ice
 private
 SpringCloud 项目练习
-# cloud-provider-payment8001 
+# cloud-provider-payment8001 支付服务提供端
 支付模块 实现了增加和查询
 # 文档书写语法
 一、标题写法：
