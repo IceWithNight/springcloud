@@ -12,6 +12,12 @@
     <inceptionYear>2001</inceptionYear>
     <modules>
         <module>cloud-provider-payment8001</module>
+        <module>cloud-consumer-order80</module>
+        <module>cloud-api-commons</module>
+        <module>cloud-eureka-server7001</module>
+        <module>cloud-eureka-server7002</module>
+        <module>cloud-eureka-server7003</module>
+        <module>cloud-provider-payment8002</module>
     </modules>
 
     <distributionManagement>
@@ -40,6 +46,12 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>3.0.0</version>
+            </dependency>
+            <!-- 引用自己定义的api通用包，可以使用Payment支付Entity -->
+            <dependency>
+                <groupId>org.ice</groupId>
+                <artifactId>cloud-api-commons</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
             <!-- spring boot 2.2.2 -->
             <dependency>
@@ -101,9 +113,10 @@
     <build>
         <plugins>
             <plugin>
-                <artifactId>maven-site-plugin</artifactId>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <locales>en,fr</locales>
+                    <addResources>true</addResources>
                 </configuration>
             </plugin>
         </plugins>
